@@ -159,3 +159,10 @@ B*A
 
 #Produto Matricial
 A%*%B
+
+#Matrizes, Curiosidades - Parte 01
+
+#Matrizes, Curiosidades - Parte 02
+
+#Quiz
+
