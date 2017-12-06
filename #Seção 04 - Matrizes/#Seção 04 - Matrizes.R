@@ -162,7 +162,89 @@ A%*%B
 
 #Matrizes, Curiosidades - Parte 01
 
+A<-matrix(1:25,5,5)
+A
+det(A)
+diag(A)
+
+#Inverter Linhas por Colunas
+
+B<-A[,-3]
+dim(B)
+A
+t(A)
+B
+t(B)
+
+#Processar Imagnes por Matriz
+
+image(A)
+image(B)
+
+A[,1]<-1000
+image(A)
+
+A[,1]<-100
+image(A)
+
+A[,1]<-50
+image(A)
+
+A
+
+A[1,]<-c(30,0,400,30,55)
+image(A)
+
+A[2,]<-c(300,2,-3,9,17)
+A
+image(A)
+
+contour(A)
+
+A[3,]<-2
+image(A)
+contour(A)
+
+persp(A)
+
+image(volcano)
+contour(volcano)
+persp(volcano)
+
 #Matrizes, Curiosidades - Parte 02
 
-#Quiz
+A<-matrix(0,3,3)
+A
 
+#Nomear COlunas
+ncolunas<-c("Idade","Sexa","Estado Civil")
+nlinhas<-c("Paulo","Joao","Maria","Carlos")
+A<-matrix(1:12,3,4,dimnames = list(ncolunas,nlinhas))
+A
+image(A)
+
+A<-matrix(1:12,4,3,dimnames = list(nlinhas,ncolunas))
+A
+image(A)
+
+#Quiz
+#Pergunta 1
+
+cadastro1 <- matrix(c(NA, NA, NA, NA), nrow = 3, ncol = 4, dimnames = list(NULL, c("Nome", "Idade", "Cidade", "Telefone")))
+cadastro[1,] <- c("Maria das Dores", 56, 3025-111, "São Paulo")
+cadastro[2,] <- c("José Aníbal", 40, 3333-012, "Santos")
+cadastro1
+
+#Pergunta 2
+cadastro <- matrix(c(NA, NA, NA, NA), nrow = 100, ncol = 4, 
+                   dimnames = list(NULL, c("Nome", "Idade", "Cidade", "Telefone")))
+
+cadastro[1,] <- c("Maria das Dores", 56, 3025-111, "São Paulo")
+cadastro[2,] <- c("José Aníbal", 40, 3333-012, "Santos")
+cadastro[3,] <- c("Pedro Silva", 23, 3091-777, "São Paulo")
+
+cadastro[1:3,2]
+
+as.numeric(cadastro[1:3,2])*4
+
+cadastro
