@@ -54,3 +54,4 @@ matrizes.names
 dados<-array(c(v1,v2,v3), dim=c(3,3,3), dimnames=list(r.names,c.names,matrizes.names))
 dados
 
+##Continuação
