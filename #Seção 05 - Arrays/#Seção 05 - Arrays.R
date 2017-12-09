@@ -12,4 +12,4 @@ A
 
 #Seção 05 - Arrays - Parte 02
 
-#Coninuandp
+#Coninuando
