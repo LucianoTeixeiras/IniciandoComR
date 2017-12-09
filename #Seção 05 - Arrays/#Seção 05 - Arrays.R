@@ -40,7 +40,7 @@ v3<-c(24,15,23)
 M<-array(c(v1,v2,v3), dim = c(3,3,3))
 M
 
-#Tabela
+######################### Array: Acessando Elementos do Array, parte 01
 
 r.names<-c("Marcos","Joao","Maria")
 r.names
@@ -54,4 +54,19 @@ matrizes.names
 dados<-array(c(v1,v2,v3), dim=c(3,3,3), dimnames=list(r.names,c.names,matrizes.names))
 dados
 
-##Continuação
+##Continuação no LnuxMint
+
+dados[3,,]
+
+dados[1,,]
+
+gastos_maria<-dados[3,,]
+gastos_maria
+
+dados
+dados[1,,]#Marcos dados todos os meses
+dados[1,1,]#Marcos dados coluna 1 todos os meses
+dados[1,1,2]#Marcos dados coluna 1 mes de janeiro
+
+######################### Array: Acessando Elementos do Array, parte 02
+
