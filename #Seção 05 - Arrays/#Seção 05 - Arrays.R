@@ -11,3 +11,5 @@ A<-array(1:9,dim=c(3,3,3))
 A
 
 #Seção 05 - Arrays - Parte 02
+
+#Coninuandp
