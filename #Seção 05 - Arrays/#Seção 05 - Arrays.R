@@ -73,4 +73,3 @@ dados[1,1,2]#Marcos dados coluna 1 mes de janeiro
 dados[,1,] #Dados de Todos os funcionarios por variavel todos os meses
 dados[,1,3] #Dados de Todos os funcionarios por variavel no mes 3
 
-
