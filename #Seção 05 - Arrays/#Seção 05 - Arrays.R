@@ -113,3 +113,5 @@ mean(dados[3,,])
 sum(dados[1,,])
 sum(dados[2,,])
 sum(dados[3,,])
+
+#Teste
