@@ -119,3 +119,40 @@ apply(dados,c(1),mean)
 
 ######################### Array: Operacoes com Arrays - Parte 02
 
+dados[1,,]
+mean(dados[1,,])
+mean(dados[2,,])
+mean(dados[3,,])
+apply(dados,c(1),mean)
+
+
+dados[,2,]
+mean(dados[,1,])
+mean(dados[,2,])
+mean(dados[,3,])
+
+apply(dados,c(2),mean)
+
+######################### Array: Operacoes com Arrays - Parte 03
+
+dados
+
+apply(dados,c(2),sum)
+
+apply(dados[1,,],c(1),mean)
+
+apply(dados[1,,],c(2),mean)
+
+dados[,2,]
+
+apply(dados[,2,],c(1),mean)
+
+
+dados[,,1]
+apply(dados[,,1],c(1),sum)
+apply(dados[,,2],c(1),sum)
+apply(dados[,,3],c(1),sum)
+
+apply(dados,c(1),sum)
+
+#Fim Modulo 5
