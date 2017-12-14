@@ -89,7 +89,7 @@ dados[3,3,3]<-c(550)
 
 dados[3,,]
 
-######################### Array: Operacoes com Arrays
+######################### Array: Operacoes com Arrays - Parte 01
 
 dados[1,,]
 sum(dados[1,,])
@@ -114,4 +114,8 @@ sum(dados[1,,])
 sum(dados[2,,])
 sum(dados[3,,])
 
-#Teste
+apply(dados,c(1),sum)
+apply(dados,c(1),mean)
+
+######################### Array: Operacoes com Arrays - Parte 02
+
