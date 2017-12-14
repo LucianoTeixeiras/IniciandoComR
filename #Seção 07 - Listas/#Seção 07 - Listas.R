@@ -47,4 +47,36 @@ gt[,,3]
 
 ######################### Listas: Modificando Informações de uma Lista
 
+list1$Idades<-c(33,70,19)
 list1
+
+list1$Cidades<-c("Poa","Noa","Sapuca")
+list1
+
+list1$`Gastos(R$)`[,,1]
+list1$`Gastos(R$)`[,,1]<-list1$`Gastos(R$)`[,,1]*100
+list1$`Gastos(R$)`
+
+list1$`Gastos(R$)`[,,2]<-list1$`Gastos(R$)`[,,2]*5
+list1$`Gastos(R$)`
+
+######################### Listas: Adicinando/Removendo Informações de uma Lista
+
+names(list1)
+list1[5]
+
+list1[5]<-c("Mensagem de Atenção")
+list1
+
+names(list1)
+names(list1)[5]<-"AVISO"
+names(list1)
+
+list1
+
+list1[5]<-NULL
+list1
+
+######################### Listas: Merge, Combinações de Listas
+
+
