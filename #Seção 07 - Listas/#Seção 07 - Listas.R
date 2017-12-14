@@ -79,4 +79,18 @@ list1
 
 ######################### Listas: Merge, Combinações de Listas
 
-###
+list1
+
+list2<-list(c("2017","2018","2019"),40,50)
+list2
+
+names(list2)<-c("Anos","Num1","Num2")
+
+list3<-c(list1,list2)
+list3
+names(list3)
+
+list4<-merge(list1,list2)
+
+
+######################### Listas: Fim
