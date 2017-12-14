@@ -73,3 +73,43 @@ dados[1,1,2]#Marcos dados coluna 1 mes de janeiro
 dados[,1,] #Dados de Todos os funcionarios por variavel todos os meses
 dados[,1,3] #Dados de Todos os funcionarios por variavel no mes 3
 
+######################### Array: Modificando os Elementos do Array
+
+dados
+dados[1,,]
+
+dados[1,,]<-c(10,20,30,40,50,60,70,80,90)
+dados[1,,]
+
+dados[1,,1]<-c(60,50,80)
+dados[1,,]
+
+dados
+dados[3,3,3]<-c(550)
+
+dados[3,,]
+
+######################### Array: Operacoes com Arrays
+
+dados[1,,]
+sum(dados[1,,])
+sum(dados[1,1,])
+
+marcos<-dados[1,,]
+marcos
+marcos[1,]
+sum(marcos[1,])
+sum(marcos[,1])
+
+mean(marcos[2,])
+mean(marcos[3,])
+
+sum(marcos[2,])
+
+mean(dados[1,,])
+mean(dados[2,,])
+mean(dados[3,,])
+
+sum(dados[1,,])
+sum(dados[2,,])
+sum(dados[3,,])
