@@ -83,3 +83,6 @@ dados<-dados[-4,]
 dados
 
 ######################### Dataframes: Fim
+
+######################### Dataframes: Exercícios
+
