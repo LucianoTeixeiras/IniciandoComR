@@ -86,3 +86,20 @@ dados
 
 ######################### Dataframes: Exercícios
 
+#01
+
+a<-c(1,3,5,7,9)
+b<-c(5,6,3,8,9)
+c<-c("a","a","b","a","b")
+
+data.frame(a,b,c)
+
+macac<-data.frame(a,b,c)
+macac
+
+macac[c(1:5),c(2,3)]
+
+macac
+macac[1,3]
+
+######################### Dataframes: Fim Exercícios
