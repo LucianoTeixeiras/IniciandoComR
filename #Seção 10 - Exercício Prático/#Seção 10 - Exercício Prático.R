@@ -50,22 +50,22 @@ cadastro<-function(a){
       cat("",notas[j],"\n")
     }
     
-    MediaEscolar<-mean(notas)
-    cat("A Média do Aluno:",MediaEscolar,"\n")
+    MediaAluno<-mean(notas)
+    cat("A Média do Aluno:",MediaAluno,"\n")
     
-    if (MediaEscolar>=7)
+    if (MediaAluno>=7)
     {
       print("Aluno Aprovado")
       Status<-"Aprovado"
     } 
     
-    if (MediaEscolar<7)
+    if (MediaAluno<7)
     {
       print("Aluno Reprovado")
       Status<-"Reprovado"
     }
     
-    alunoDados[i,]<-c(nome,Nota1,Nota2,Nota3,Nota4,MediaEscolar,Status)
+    alunoDados[i,]<-c(nome,Nota1,Nota2,Nota3,Nota4,MediaAluno,Status)
     
     print("Cadastrar outro aluno?   Sim-> 1    Não -> 0")
     x<-scan(n=1)
@@ -73,8 +73,7 @@ cadastro<-function(a){
     i<-i+1
   } #Fim do While
   
-  print("Obrigado")
-  print("Banco de Dados:")
+  print("As médias dos Alunos:")
   
   return(alunoDados)
   

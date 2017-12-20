@@ -1,0 +1,997 @@
+####### Inicio: A IMPORTANCIA DO R
+
+########################   instala??es  ###########
+
+#- INSTALA??O DO R
+
+#- R Studio
+
+
+########################   CITA??ES E DEMO  ###########
+
+#como citar o R
+citation()
+demo(persp)
+demo(graphics)
+
+
+################ R COMO CALCULADORA
+
+
+#Operadores (+ - /  *  ^ ) e ordem das opera??es
+
+#fun??es prontas
+sqrt(9)
+sin(3)
+cos(5)
+prod(2,4)
+abs(-6)
+log(3,10)
+factorial(5)
+help(log)  
+
+
+
+##### VETORES: seq??ncia de valores num?ricos ou de caracteres (letras, palavras).
+
+
+idades<-scan()
+#OU 
+idades<-c(30,40,50,44,33)
+
+length(idade)
+
+cidades<-c("Recife","S?o Paulo","Belo Horizonte")
+
+
+## Acessar/modificar elementos do vetor
+
+idades[2]
+idades[1:3]
+cidades[c(1,3)]
+
+#retirando elementos
+idades[-2]
+
+#modificando
+
+idades[2]<-90
+idades
+
+
+
+
+
+## Opera??es com vetores  ((somas, subtra??es, multipl., produto)
+
+x<-c(2,4,6)
+y<-c(3,5,7)
+
+x-2
+x+2
+x*2
+x^2
+x+y
+x-y
+x*y
+
+idades<-c(34,43,20,50)
+
+min(idades)
+max(idades)
+mean(idades)
+
+idades2<-idades*2
+a<-idades+idades2
+
+idades2<-idades^2
+
+idades2<-log(idades)
+
+v <- c(2,5.5,6,9)
+t <- c(8,2.5,14,9)
+v>t
+v==t
+v<=t
+v!=t
+
+
+# Uni?o, intercec??o e diferen?as
+a<-c(1,2,3,4,5,6,7,8,9)
+b<-c(2,4,6,8,20)
+
+union(a,b)
+intersect(a,b)
+setdiff(a,b)
+
+# pesquisaa e remo??o
+
+ls()
+ls(pattern = "var") #procura as vari?veis salvas, com o padr?o "var"
+
+rm(idades2)
+
+
+
+
+
+
+######## SEQUENCIAS 
+
+1:30
+35:60
+
+seq(1,10)
+seq(1,10,2) #a passos de 2
+
+
+
+#usando repeti??es
+
+rep(2,5) # 2 repetido 5 vezes
+
+rep("Paulo",4) # repete "Paulo" 4 vezes
+rep(1:4,3) # repete uma seq??ncia 2 vezes
+rep(idades,4) #repetir o vetor "idades" 4 vezes
+rep(1:4,each=3) # dado uma sequencia (1:4), repetir CADA valor 3 vezes
+rep(idades,each=2) #cada elemento do vetor repetido 2 vezes
+
+rep(c("Bra","sil"),5) # repete A e B cinco vezes.
+rep(c("Bra","sil"),each=5) # repete A e B cinco vezes.
+
+rep(c("Bra","Si","Lan","Dia"),c(3,2,7,4)) #
+
+
+
+
+
+### Amostras aleat?rias
+
+
+a<-sample(1:100,5) #5 valores entre 1 e 100
+sort(a)  #ordenar crescente
+sort(a, decreasing=TRUE)  #ordenar decrescente
+rank(a)  #o maior rank ? o maior n?mero
+
+
+
+
+
+##____________ Exerc?cios 1 (multipla escolha) _____________"
+
+1-  N?mero de filhos de 10 casais...
+
+5, 3, 4, 5, 6, 2, 3, 4, 1, 2, 0 
+
+- O que faz o camando n_filhos<-c(5, 3, 4, 5, 6, 2, 3, 4, 1, 2, 0)? 
+- O que faz o camando max(n_filhos)
+- O que faz o camando min(n_filhos)
+- O que faz o camando mean(n_filhos)
+- O que faz o camando n_filhos[3]<-7
+- O que faz o camando sort(n_filhos)
+..
+ rank(n_filhos)
+
+
+2 - seja ....
+
+- O que faz o comando union(a,b)
+- O que faz o comando intersect(a,b)
+- O que faz o comando setdiff(a,b)
+
+etc............................
+
+
+
+
+
+##### MATRIZES: cole??o de vetores em linhas e colunas, sendo eles do mesmo tipo (num?rico ou de caracteres).
+
+#usando vetores
+
+a<-1:3
+b<-4:6
+
+A<-cbind(a,b)
+B<-rbind(a,b)
+
+dim(A)
+dim(B)
+
+
+#usando o comando matrix
+
+matrix
+
+m<-matrix(1:8,2,4)
+
+m<-matrix(0,3,2)
+m<-matrix( c('a','a','b','c','b','a'), nrow = 2, ncol = 3, byrow = TRUE)
+
+
+#### Acessando elementos da Matriz
+
+nrow(m)
+ncol(m)
+dim(m)
+m[1:3,2]
+m[1,]
+m[1,2]
+m[c(1,2),1:2]
+m
+
+
+
+
+#modificando os elementos da Matriz
+
+m[,2]<-c(1,3,6)
+
+m[2,2]<-300
+
+#adicionar ou retirar uma linha ou coluna
+
+m[-1,]
+m[,-1]
+
+
+#Opera??es com matrizes
+
+
+#+ - /  *4   A*B   A%*%B
+
+#Curiosidades sobre matrizes
+
+
+diag()
+t()
+solve() #inversa
+A <- matrix(1,5,5)
+A[1,3] <- 0
+A[2,4] <- 0
+A[2,1] <- 3
+
+
+image(A)
+contour(A)
+persp(A)
+
+
+image(volcano)
+contour(volcano)
+persp(volcano)
+
+
+
+ncolunas<-c("Idade","Sexo","Estado Civil")
+nlinhas<-c("Paulo","Jo?o","Maria")
+A<-matrix(0,3,3,dimnames=list(nlinhas,ncolunas))
+
+
+##################### ARRAY : Cole??o de Matrizes
+
+#M1, M2, M3, M4  --> A
+
+#cole??o de diferentes entradas de dados.S?o os objetos de dados
+#no R que podem armazenar dados em mais de duas dimens?es. 
+
+
+####Cria??o
+
+x <- array(1:20, dim=c(4,5))
+x <- array(1:20, dim=c(4,5,3))  #guarda 3 matrizes de mesma dimens?o 4 linhas e 5 colunas.
+                                 #Obs 3 matrizes (3 elementos iguais) 
+
+#ou usando estes n?meros construa 2 matrizes  3x3
+vector1 <- c(5,9,3)
+vector2 <- c(10,11,12,13,14,15)
+
+dados<-array(c(vector1,vector2),dim = c(3,3,2))
+
+dim(x)
+
+a <- array(c('green','yellow'),dim = c(3,3,2))
+
+
+# Atribuindo nomes: voc? pode dar nomes a este cada uma das matrizes e tamb?m a suas colunas e linhas
+
+c.names <- c("Gasto com Alimenta??o","Gasto com Moradia","Gasto com Transporte")
+r.names <- c("Marcos","Jo?o","Maria")
+matrix.names <- c("Janeiro","Fevereiro","Mar?o")
+
+dados<-array(c(vector1,vector2),dim = c(3,3,3),dimnames = list(r.names,c.names,matrix.names))
+
+##Acessando os elementos de um ARRAY
+
+dados[3,,]  #apenas a terceira linha nas duas matrizes (gastos de Maria)
+dados[2,,]  #apenas a segunda linha nas duas matrizes (gastos de Jo?o)
+dados[3,,2] # terceira linha da segunda matriz do array "dados" (gasto de Maria em Fevereiro)
+dados[2,,1]  #gasto de Jo?o em Janeiro
+dados[3,1,]  #gasto de Maria (linha 3) com Alimenta??o (col 1) em todos os meses
+dados[2,2,2:3]  #gasto com Jo?o com moradia nos dois ultimos meses
+
+
+dados[,1,] #Gasto com Alimenta??o
+dados[,1,2] #Gasto com Alimenta??o em Fevereiro
+dados[,1,3] #Gasto com Alimenta??o em mar?o
+
+dados[,2,] #Gasto com Moradia
+dados[,2,1] #Gasto com Moradia em Janeiro
+dados[,3,] #Gasto com Transporte
+
+#modificar elementos do Array
+
+#OPERA??ES com arrays 
+
+gastos_Maria<-dados[3,,]
+gastos_Joao<-dados[2,,]
+gastos_marcos<-dados[1,,]
+gastos_funcionarios<-gastos_Maria+gastos_Joao+gastos_marcos
+
+sum(gastos_marcos)
+sum(gastos_Joao)
+sum(gastos_Maria)
+
+sum(dados[,1,]) #soma dos Gastos com Alimenta??o
+sum(dados[,2,]) #soma dos Gastos com Moradia
+sum(dados[,3,]) #soma dos Gastos com Transporte
+
+apply(dados, c(1), sum) #soma dos gastos de cada um ((1):linha) em todo o per?odo
+apply(dados, c(2), sum)
+
+
+#m?dia
+mean(dados[,1,]) #Gasto m?dio com Alimenta??o
+mean(dados[,2,]) #Gasto m?dio com Moradia
+mean(dados[,3,]) #Gasto m?dio com Transporte
+apply(dados, c(2), mean)
+
+
+# m?dia por pessoa
+mean(dados[3,,])  #m?dia de gastos de Maria
+mean(dados[2,,])  #m?dia de gastos de Jo?o
+mean(dados[1,,])  #m?dia de gastos de Marcos
+apply(dados, c(1), mean)
+
+
+#Gastos de Maria
+Maria<-dados[3,,]
+ mean(Maria[1,])  #gasto m?dio dela com Alimenta??o 
+ mean(Maria[2,])  #gasto m?dio dela com Moradia 
+ mean(Maria[3,])  #gasto m?dio dela com Transporte
+
+ 
+  apply(dados[3,,], c(1), mean)  #gasto m?dio por ?rea (aplicando a m?dia em cada linha da matriz)
+ apply(dados[3,,], c(2), mean)  #gasto m?dio mensal dela. (aplicando a m?dia em cada coluna da matriz)
+ 
+
+ 
+
+#################### FATORES 
+ 
+ vari?vel quantitativa por fator?
+  Ex: pesos por Estado Civil
+ 
+ est_civ<-c("Casado","Solteiro","Divorciado","Casado","Casado","Casado","Outro","Solteiro")
+ 
+ est_civ
+
+  #: forma do r entender uma vari?vel categ?rica
+ #estudar renda por um fator GENERO .... uma vari?vel n?merica pode ser Fator (Ex: 1-Masculino  2: Feminino)
+
+  
+cores <- c('green','green','yellow','red','red','red','green')
+cores_fator <- factor(cores)
+
+#gerando fatores
+# gl(n, k, labels)  # n: quantidade de n?veis,  k  repeti??es
+
+gl(3, 2, labels = c("SP", "PE","CE"))
+
+
+
+#tapply (m?dia por fator)
+
+
+#Changing the Order of Levels
+#The order of the levels in a factor can be changed by applying the factor function again with new order of the levels.
+
+data <- c("East","West","East","North","North","East","West","West","West","East","North")
+# Create the factors
+factor_data <- factor(data)
+print(factor_data)
+
+# Apply the factor function with required order of the level.
+new_order_data <- factor(factor_data,levels = c("East","West","North"))
+print(new_order_data)
+
+
+
+######################### LISTAS
+
+
+list1 <- list(c(2,5,3),21.3,sin)
+list1 <- list(c(2,5,3),c("A","B"),matrix(0,4,5))
+
+obs: array ? um conjunto do mesmo objeto
+obs: lista ? um conjunto de diferentes objetos
+
+
+
+
+idades<-c(20,40,50)
+cidade<-c("Los Angeles", "Londres","Paris")
+
+c.names <- c("Gasto com Alimenta??o","Gasto com Moradia","Gasto com Transporte")
+r.names <- c("Marcos","Jo?o","Maria")
+matrix.names <- c("Janeiro","Fevereiro","Mar?o")
+gastos<-array(1:20,dim = c(3,3,3),dimnames = list(r.names,c.names,matrix.names))
+
+
+list1 <- list(idades,cidade,gastos)
+
+names(list1)<-c("Idades","Cidade","Gastos")
+
+list1
+
+
+
+#### acessando as informa??es da lista
+
+list1[1]
+list1[2]
+list1[3]
+
+list1$Idades
+
+list1$Idades[1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Modificando as informa??es da lista
+
+
+
+list1$Idades<-c(15,18,60)
+list1$Idades[2]<-98
+
+list1$Cidade<-c("Lugar1","Lugar2","Lugar3")
+
+list1$Cidade[2]<-"Belo Horizonte"
+
+
+ar<-list1$Gastos
+
+ar[,,3]
+
+ar[,,3]*100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#adicionando ou removendo itens da lista
+
+list1[4] <- c("ATEN??O")
+
+names(list1)[4]<-c("aviso")
+  
+#removendo itens da lista
+
+list1[4] <- NULL
+
+
+
+
+
+
+#combinando listas (merge)
+
+list2 <- list(c("2017","2018","2019"),40,50)
+names(list2)<-c("Ano","N?mero1","N?mero2")
+
+# Merge the two lists.
+merged.list <- c(list1,list2)
+
+
+
+
+
+
+
+
+
+
+##### DATAFRAME: planilha de dados
+
+nomes<-c("Jo?o","Maria","Paula")
+idades<-c(34,43,53)
+genero<-c("Masculino","Feminino","Feminino")
+
+dados<-data.frame(nomes,idades,genero)
+
+dim(dados)
+nrow(dados)
+ncol(dados)
+colnames(dados)
+
+str(dados)
+
+summary(dados)
+
+
+
+
+#acessando suas informa??es
+
+
+
+
+dados[1:2,]
+
+dados[c(1,3),]
+
+dados[1,2]
+
+dados[c(1,3),c(1,2)]
+
+
+dados(attach)
+dados$nomes
+dados$idades
+dados$genero
+
+subset<- data.frame(dados$nomes,dados$genero)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Modificando as informa??es do Dataframe
+
+
+dados[1:2,]
+dados$nomes<-c("""""")
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Adicionando vari?veis aos dados
+
+
+
+dados$cidades <- c("Recife","Olinda","Jo?o Pessoa")
+names(dados)<-c("Nomes","Idade","Genero")
+
+
+#Removendo vari?veis 
+
+dados<-dados[,-4]
+
+
+
+
+#Adicionando ou Removendo Indiv?duos (Casos)
+
+dados$Nome<-as.character(dados$Nome)
+
+dados[4,]<-c("Ruth",39,"Feminino")
+
+
+
+
+#Combinando (Merge) dois dataframes
+
+dados2<- 	data.frame(
+  Salario = c(578.0,722.5,632.8), 
+  Data_nasc = as.Date(c("2013-05-21","2013-07-30","2014-06-17")),
+  dept = c("IT","Opera??es","Finan?as"),
+  stringsAsFactors = FALSE
+)
+
+merge_dados<-cbind(dados,dados2)
+
+
+#Adicionando linhas
+
+x<-c(Salario=900,Data_nasc="2017-08-30",dept="Estatistica")
+rbind(dados2,x)
+
+
+
+
+
+
+
+
+#################CONSTRUINDO SUAS PR?PRIAS FUN??ES ###############
+==
+!=
+>
+<
+<=
+
+  
+  
+  
+
+  
+ 
+  
+  
+  
+  
+
+ 
+# For()
+
+
+for( "vari?vel"  in  "vetor de valores")
+{
+  comandos 1
+  comando 2
+  comando 3
+  . . .
+  comando que seram repetidos
+  
+}
+
+
+
+x<-scan()
+
+for(i in 1:n)
+{
+  print("Obrigado")
+  
+}
+
+
+
+
+
+
+
+
+while (condi??o)
+  {
+  comandos a serem repetidos
+  
+  }
+
+
+x<-11
+while (x<10)  
+  {
+    print(x)
+    x<-x+1
+  }
+
+
+
+
+
+
+#DECISION MAKING
+
+
+
+if(condi??o)
+{
+  comando1
+  comando2
+  comando3
+}
+
+
+x<-2
+
+if(x==9)
+{
+  print("Voc? digitou o 9")
+}
+
+if(x==3)
+{
+  print("Voc? digitou o 3")
+}
+
+
+
+
+
+
+
+
+
+
+if(condi??o)
+{
+  comando1
+  comando2
+  
+}
+
+
+
+
+
+
+
+
+x<-3
+
+
+if(x==9)
+{
+  print("Voc? digitou o n?mero 9")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ex: #Recebe Notas e Retorna se foi aprovado
+
+  
+  
+x<-scan()  
+
+for(i in 1:length(x))
+  {
+  print(x[i])
+  }
+
+
+
+
+
+
+
+
+
+
+#DECISION MAKING
+
+
+
+
+if(condi??o)
+{
+  comando1
+  comando2
+}
+
+
+x<-8
+
+if(x<9)
+{
+    print("Vc digitou um n?mero menor que 9")
+}
+
+if(x==8)
+{
+  print("Voc? digitou o 8")
+}
+
+
+
+
+
+
+
+
+
+
+> minha.funcao <- function( argumento1, argumento2, argumento3, . . .)
+{
+  
+  comando 1
+  
+  comando 2
+  comando 3
+  . . .
+  comando n
+  return("resultado")
+}
+
+  
+
+
+
+#Construir uma fun??o que calcula o dobro 
+  dobro <- function(x) 
+    {
+       y <- 2*x
+       print(x)
+       print(y)
+       cat()
+    }
+
+  
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  a<-c(2,4,6,8,10,12,14,16,18,20)
+a[a>10]
+
+
+name <- function(arg_1, arg_2, ...) expression
+
+#novo operador
+"%!%" <- function(X, y) { ... }
+
+
+#Decision Make
+
+# if
+if(algo acontecer) fa?a isso   else   fa?a aquilo
+if(algo acontecer & ) fa?a isso   else   fa?a aquilo
+
+
+#for()
+for(i in 1:10) fa?a
+
+#While
+
+
+
+cat ("var.1 is ", var.1 ,"\n")
+
+
+
+
+
+
+
+
+
+
+
+##### PROJETO #####
+
+exemplo<-function(z)
+{
+ Nomes<-as.character()
+ Prova1<-as.numeric()
+ Prova2<-as.numeric()
+ Prova3<-as.numeric()
+ MediaEscolar<-as.numeric()
+ Situa??o<-as.character()
+
+  alunos<-data.frame(Nomes,Prova1,Prova2,Prova3,MediaEscolar,Situa??o)
+  alunos$Situa??o<-as.character(alunos$Situa??o)
+  alunos$Nomes<-as.character(alunos$Nomes)
+
+    
+print("Esta fun??o Realiza as seguintes Atividades:")
+print("1 - cadastra alunos")
+print("2 - Recebe suas notas")
+print("3 - Mostra sua m?dia e diz se foi aprovado")
+
+#Recebe notas do aluno i nos 3 exerc?cios
+print("Cadastro de Alunos --> Digite 1")
+x<-scan(n=1)
+i<-1
+while(x==1)
+{
+
+      print("Nome:")
+      nome<-scan(what=character(),nmax=1)
+  
+      print("Nota 1:")
+      Prova1<-scan(n=1)
+
+      print("Nota 2:")
+      Prova2<-scan(n=1)
+  
+      print("Nota 3:")
+      Prova3<-scan(n=1)
+   
+      notas<-c(Prova1,Prova2,Prova3)
+  
+          for(j in 1:length(notas))
+                 {
+                      cat("Nota na Prova",j,"-->")
+                      cat("",notas[j],"\n")
+                 }
+
+          MediaEscolar<-mean(notas)
+          cat("M?dia do Aluno:",MediaEscolar,"\n")
+
+       if (MediaEscolar>=7)
+            {
+                 print("Aluno Aprovado")
+         Situa??o<-"Aprovado"
+            } 
+
+       if (MediaEscolar<7)
+            {
+                 print("Aluno Reprovado")
+         Situa??o<-"Reprovado"
+            }
+
+          
+          alunos[i,]<-c(nome,Prova1,Prova2,Prova3,MediaEscolar,Situa??o)
+          
+       print("Cadastrar outro aluno?   Sim-> 1    N?o -> 0")
+       x<-scan(n=1)
+       
+i<-i+1
+} #Fim do While
+
+print("Obrigado")
+print("Banco de Dados:")
+
+return(alunos)
+
+}#fim da fun??o
+
+
+
+
+
